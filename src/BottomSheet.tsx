@@ -373,10 +373,11 @@ export const BottomSheet = React.forwardRef<
           maxHeight: maxHeightRef.current,
           maxSnap: maxSnapRef.current,
           minSnap: minSnapRef.current,
-          immediate:
-            resizeSourceRef.current === 'element'
-              ? prefersReducedMotion.current
-              : true,
+          immediate: true,
+          // library implementation
+          // resizeSourceRef.current === 'element'
+            //   ? prefersReducedMotion.current
+            //   : true,
         })
       }, [asyncSet, lastSnapRef, prefersReducedMotion]),
       closeSmoothly: useCallback(
